@@ -5,6 +5,7 @@ public class Credential {
 	private User user;
 	private String login;
 	private String password;
+	private String signatureKey;
 	private Integer statusCode;
 	private String returnMessage;
 	
@@ -57,4 +58,11 @@ public class Credential {
 		this.returnMessage = returnMessage;
 	}
 
+	public String getSignatureKey() {
+		return signatureKey;
+	}
+
+	public void setSignatureKey(String signatureKey) {
+		this.signatureKey = signatureKey;
+	}
 }
