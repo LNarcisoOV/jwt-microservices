@@ -31,7 +31,7 @@ public class AuthorizationController {
 		}
 
 		return new ResponseEntity<>(globalCredential,
-				credential.getStatusCode() == 200 ? HttpStatus.OK : HttpStatus.INTERNAL_SERVER_ERROR);
+				globalCredential.getStatusCode() == 200 ? HttpStatus.OK : HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 	
 	@GetMapping(value = "/credential")
