@@ -5,6 +5,18 @@ public class Credential {
 	private User user;
 	private String login;
 	private String password;
+	private String signatureKey;
+	private Integer statusCode;
+	private String returnMessage;
+	
+	public Credential() {
+	}
+
+	public Credential(String returnMessage, Integer statusCode) {
+		super();
+		this.statusCode = statusCode;
+		this.returnMessage = returnMessage;
+	}
 
 	public User getUser() {
 		return user;
@@ -30,4 +42,27 @@ public class Credential {
 		this.password = password;
 	}
 
+	public Integer getStatusCode() {
+		return statusCode;
+	}
+
+	public void setStatusCode(Integer statusCode) {
+		this.statusCode = statusCode;
+	}
+
+	public String getReturnMessage() {
+		return returnMessage;
+	}
+
+	public void setReturnMessage(String returnMessage) {
+		this.returnMessage = returnMessage;
+	}
+
+	public String getSignatureKey() {
+		return signatureKey;
+	}
+
+	public void setSignatureKey(String signatureKey) {
+		this.signatureKey = signatureKey;
+	}
 }
